@@ -1,3 +1,5 @@
+@import url("fontawesome-all.min.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -313,6 +315,7 @@ header.major h2 {
 }
 
     .icon:before {
+        -webkit-font-smoothing: antialiased;
         display: inline-block;
         font-style: normal;
         font-variant: normal;
@@ -335,11 +338,45 @@ header.major h2 {
         font-weight: 900;
     }
 
+    .icon.brands:before {
+        font-family: 'Font Awesome 5 Brands';
+    }
+
 /* Video */
 
-a > video {
+video {
     margin-bottom: 2em;
+    width: 75%;
 }
+
+/* @media screen and (max-width: 736px) {
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        align-items: stretch;
+    }
+
+    .row > .col-12-small {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        align-items: stretch;
+    }
+
+    .row > .col-12-xlarge {
+        width: 100%;
+    } */
+/* } */
 
 
 /* Image */
@@ -402,6 +439,7 @@ a > video {
     .image img {
         border-radius: 0.35em;
         display: block;
+        width: 75%;
     }
 
 
@@ -719,6 +757,77 @@ ul.actions {
             #header h1 br {
                 display: none;
             }
+}
 
+.custom-slider { display: none; }
+.slide-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;        
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #999999;
+  font-size: 30px;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.6s ease;
+}
+.prev{ left: 15px; }
+.next { right: 15px; }
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+.text-background{
+    background-color: white;
+    opacity: 60%;
+  
+}
+.slide-text {
+  position: absolute;
+  color: black;
+  font-size: 15px;
+  padding: 15px;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
 
+.slide-img{ 
+  width: 100%; 
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+ }
+
+.slide-dot{ 
+    text-align: center; 
+    margin-bottom: 2em;
+}
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #999999;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover { background-color: #111111; }
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
 }

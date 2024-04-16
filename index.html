@@ -41,11 +41,11 @@
 				<!-- Two -->
 					<section id="two">
 						<h2>Projets récents</h2>
-						<div class="row" > <!---->
+						<div class="row" >
 							<article class="col-6 col-12-xsmall work-item">
-								<a><video width="368" height="375" controls poster>
+								<video width="368" height="375" controls poster> <!---->
 									<source src="videos/video.pygame.tile_game.webm">
-								</video></a>
+								</video>
 								<h3>Un jeu de tuiles</h3>
 								<p>Le but du jeu est de ramasser les trois clés pour ouvrir le coffre en évitant les monstres.
                                     Inspiré par le cours <a href="https://openclassrooms.com/fr/courses/7527306-decouvrez-le-fonctionnement-des-algorithmes">
@@ -54,7 +54,30 @@
                                 Je projette d'ajouter des niveaux et des équipements au joueur. </p>
 							</article>
                             <article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image" ><img height="375" src="images/vesti.jpeg" alt="" /></a>
+								<div class="slide-container">
+									<div class="custom-slider fade">
+									  <img class="slide-img" height="375" src="images/vesti/vesti-dressing.jpeg">
+									  <div class="slide-text text-background">Le contenu du dressing de l'utilisateur.</div>
+									</div>
+									<div class="custom-slider fade">
+									  <img class="slide-img" height="375" src="images/vesti/ootdpage.png">
+									  <div class="slide-text text-background">La tenue générée de manière aléatoire.</div>
+									</div>
+									<div class="custom-slider fade">
+									  <img class="slide-img" height="375" src="images/vesti/eventpage.jpeg">
+									  <div class="slide-text text-background">La planification des tenues dans l'agenda en fonction des sorties.</div>
+									</div>
+									<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+									<a class="next" onclick="plusSlides(1)">&#10095;</a>
+								  </div>
+								  <br>
+								<div class="slide-dot">
+								<span class="dot" onclick="currentSlide(1)"></span> 
+								<span class="dot" onclick="currentSlide(2)"></span> 
+								<span class="dot" onclick="currentSlide(3)"></span> 
+								</div>
+								  
+								<!-- <a href="images/fulls/01.jpg" class="image" ><img src="images/vesti.jpeg" alt="" /></a> -->
 								<h3>Vesti</h3>
 								<p>Il s'agit d'un dressing connecté dans lequel un utilisateur peut saisir le contenu de sa 
                                     garde-robe. Le site propose ensuite des tenues générées aléatoirement. Une tenue peut 
@@ -68,7 +91,7 @@
 						<h2>Projet en cours de conception</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image"><img src="images/famille.png" alt="" /></a>
+								<a href="index-nous-sortons.html" class="image"><img src="images/famille.png" alt="" /></a>
 								<h3>Nous sortons les enfants !</h3>
 								<p>Il s'agit d'un site permettant de trouver rapidement des sorties adaptées à nos enfants 
                                     à proximité de chez soi. Il proposera des activités dans des structures payantes mais 
@@ -76,9 +99,6 @@
                                     les balades en fôrets par exemple.  </p>
 							</article>
 						</div>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul> -->
 					</section>
 
 				<!-- Three -->
@@ -86,18 +106,6 @@
 						<h2>Contact</h2>
 						<p>N'hésitez pas à me contacter pour toute question ou pour toute demande d'information complémentaire. </p>
 						<div class="row">
-							<!-- <div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Nom, prénom" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Envoyer le message" /></li>
-								</ul>
-							</div> -->
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
 									<li>
@@ -131,4 +139,5 @@
                         </div>
                     </footer>
     </body>
+	<script src="carroussel.js"></script>
 </html>
